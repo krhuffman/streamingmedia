@@ -64,10 +64,6 @@ body {
         font-size: 1em;
     }
 
-    h3{
-        padding-left: 30px;
-    }
-
     p {
         margin: 0;
         font-size: 1em;
@@ -86,8 +82,16 @@ body {
         text-transform: uppercase;
         font-size: 1em;
         max-height: 20px;
+        margin-bottom: 5px;
     }
 
+    #trending{
+        color: #590242;
+    }
+    #trending h2{
+        padding-left: 25px;
+        margin-bottom: 0;
+    }
     .scrollX {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -111,10 +115,15 @@ body {
 
     dl {
         display: flex;
+        margin-top: 0;
     }
 
     dt {
         padding-right: 5px;
+        font-style: italic;
+    }
+    dd{
+        margin:0;
     }
 
     audio {
@@ -151,7 +160,7 @@ body {
 
 
 
-    #moreTrending {
+    .mainLink {
         text-decoration: none;
         display: block;
         background-color: #590242;
@@ -163,13 +172,14 @@ body {
         margin: 10px 0 10px 10px;
     }
 
-    #moreTrending:hover {
+    .mainLink:hover {
         background-color: #020659;
     }
 
     #h3Titles{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        padding: 20px 0 0 30px;
     }
 
     #playlistContainer {
@@ -198,32 +208,20 @@ body {
         background-color: #020873;
     }
 
-    #playlist::-webkit-scrollbar{
+    #playlist::-webkit-scrollbar, #curated::-webkit-scrollbar{
         width: 15px;
     }
-    #playlist::-webkit-scrollbar-track{
+    #playlist::-webkit-scrollbar-track, #curated::-webkit-scrollbar-track{
         box-shadow: inset 0 0 15px #020659;
     }
-    #playlist::-webkit-scrollbar-thumb{
+    #playlist::-webkit-scrollbar-thumb, #curated::-webkit-scrollbar-thumb{
         background: #020659;
         border-radius: 5px;
     }
-    #playlist::-webkit-scrollbar-thumb:hover{
+    #playlist::-webkit-scrollbar-thumb:hover, #curated::-webkit-scrollbar-thumb:hover{
         background: #fff;
     }
-    #curated ::-webkit-scrollbar{
-        width: 15px;
-    }
-     #curated ::-webkit-scrollbar-track{
-        box-shadow: inset 0 0 15px #020659;
-    }
-   #curated ::-webkit-scrollbar-thumb{
-        background: #020659;
-        border-radius: 5px;
-    }
-    #curated ::-webkit-scrollbar-thumb:hover{
-        background: #fff;
-    }
+    
 
     .songContainer {
         padding: 8px;
@@ -231,13 +229,13 @@ body {
         max-height: 115px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .songContainer p {
         color: #fff;
         grid-column-start: 2;
-        grid-row-start: 1;
+        grid-row-start: 2;
         text-align: center;
     }
 
@@ -248,6 +246,15 @@ body {
         text-align: center;
     }
 
+    .songContainer img{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    #linkDiv{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
     footer p {
         text-align: center;
