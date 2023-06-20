@@ -17,26 +17,43 @@ body {
         display: none;
     }
 
-    nav {
-        padding: 5px;
-        background-color: #2104D9;
+    header {
+        position: relative;
+        height: 100px;
+        background-color: #020873;
     }
 
-    nav img {
+    nav {
+        padding-left: 10px;
+        background-color: #020873;
+    }
+
+    li img {
         float: right;
     }
 
     ul li {
         list-style-type: none;
-        display: inline-block;
         text-transform: uppercase;
         color: #fff;
         text-align: center;
-        max-width: 125px;
-        padding-right: 50px;
+        width: 100%;
     }
 
-    nav a {
+    .wordBreak{
+        width:125px;
+        overflow: visible;
+    }
+
+    #homeTitle{
+        padding-left: 15px;
+        font-size: 1.5em;
+        text-transform: none;
+        font-variant: small-caps;
+        font-weight: bold;
+    }
+
+    li a {
         text-decoration: none;
         color: #fff;
     }
@@ -45,10 +62,10 @@ body {
         overflow: visible;
         position: absolute;
         top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        display: flex;
         margin: 0;
-        padding: 0;
+        padding: 10px 0 0 0;
+        width: 95%;
     }
 
     h1 {
@@ -57,8 +74,9 @@ body {
         line-height: 2em;
     }
 
-    h2, h3 {
-        margin: 10px 0 10px 0 ;
+    h2,
+    h3 {
+        margin: 10px 0 10px 0;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 1em;
@@ -69,10 +87,12 @@ body {
         font-size: 1em;
     }
 
-    #smoothJazz {
-        padding-top: 15px;
+    #jazz {
+        position: absolute;
+        padding: 0 10px 10px 30px;
         background-color: #020659;
         color: #fff;
+        top: 50px;
     }
 
 
@@ -85,13 +105,19 @@ body {
         margin-bottom: 5px;
     }
 
-    #trending{
+    main{
+        padding-top:50px;
+    }
+
+    #trending {
         color: #590242;
     }
-    #trending h2{
+
+    #trending h2 {
         padding-left: 25px;
         margin-bottom: 0;
     }
+
     .scrollX {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -122,8 +148,9 @@ body {
         padding-right: 5px;
         font-style: italic;
     }
-    dd{
-        margin:0;
+
+    dd {
+        margin: 0;
     }
 
     audio {
@@ -136,25 +163,30 @@ body {
         background-color: #fff;
         border-radius: 50%;
     }
+
     audio::-webkit-media-controls-play-button {
         background-color: #fff;
         border-radius: 50%;
     }
-    audio::-webkit-media-controls-enclosure{
+
+    audio::-webkit-media-controls-enclosure {
         background-color: rgba(255, 255, 255, .5);
     }
 
-    #trending ::-webkit-scrollbar{
+    #trending ::-webkit-scrollbar {
         width: 15px
     }
-    #trending ::-webkit-scrollbar-track{
+
+    #trending ::-webkit-scrollbar-track {
         box-shadow: inset 0 0 15px #590242;
     }
-    #trending ::-webkit-scrollbar-thumb{
+
+    #trending ::-webkit-scrollbar-thumb {
         background: #590242;
         border-radius: 5px;
     }
-    #trending ::-webkit-scrollbar-thumb:hover{
+
+    #trending ::-webkit-scrollbar-thumb:hover {
         background: #020659;
     }
 
@@ -176,7 +208,7 @@ body {
         background-color: #020659;
     }
 
-    #h3Titles{
+    #h3Titles {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 20px 0 0 30px;
@@ -208,20 +240,27 @@ body {
         background-color: #020873;
     }
 
-    #playlist::-webkit-scrollbar, #curated::-webkit-scrollbar{
+    #playlist::-webkit-scrollbar,
+    #curated::-webkit-scrollbar {
         width: 15px;
     }
-    #playlist::-webkit-scrollbar-track, #curated::-webkit-scrollbar-track{
+
+    #playlist::-webkit-scrollbar-track,
+    #curated::-webkit-scrollbar-track {
         box-shadow: inset 0 0 15px #020659;
     }
-    #playlist::-webkit-scrollbar-thumb, #curated::-webkit-scrollbar-thumb{
+
+    #playlist::-webkit-scrollbar-thumb,
+    #curated::-webkit-scrollbar-thumb {
         background: #020659;
         border-radius: 5px;
     }
-    #playlist::-webkit-scrollbar-thumb:hover, #curated::-webkit-scrollbar-thumb:hover{
+
+    #playlist::-webkit-scrollbar-thumb:hover,
+    #curated::-webkit-scrollbar-thumb:hover {
         background: #fff;
     }
-    
+
 
     .songContainer {
         padding: 8px;
@@ -246,12 +285,12 @@ body {
         text-align: center;
     }
 
-    .songContainer img{
+    .songContainer img {
         grid-row-start: 1;
         grid-row-end: 3;
     }
 
-    #linkDiv{
+    #linkDiv {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
